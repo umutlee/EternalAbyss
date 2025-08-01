@@ -1,0 +1,72 @@
+{
+  "name": "default-agent",
+  "version": "1.0.0",
+  "description": "Default agent configuration",
+  "mcpServers": {
+    "Context7": {
+      "command": "npx",
+      "args": [
+        "-y ",
+        "@upstash/context7-mcp@latest"
+      ],
+      "env": {},
+      "timeout": 60000
+    },
+    "Sequential Thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "env": {},
+      "timeout": 60000
+    },
+    "vibedev-specs": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vibedev-specs-mcp@latest"
+      ],
+      "env": {},
+      "timeout": 60000
+    }
+  },
+  "tools": [
+    "@Context7",
+    "@Sequential Thinking",
+    "fsRead",
+    "fsWrite",
+    "fsReplace",
+    "listDirectory",
+    "fileSearch",
+    "executeBash",
+    "codeReview"
+  ],
+  "allowedTools": [
+    "fsRead",
+    "fsWrite",
+    "fsReplace",
+    "listDirectory",
+    "fileSearch",
+    "executeBash",
+    "codeReview"
+  ],
+  "toolsSettings": {
+    "execute_bash": {
+      "alwaysAllow": [
+        {
+          "preset": "readOnly"
+        }
+      ]
+    },
+    "use_aws": {
+      "alwaysAllow": [
+        {
+          "preset": "readOnly"
+        }
+      ]
+    }
+  },
+  "includedFiles": [],
+  "resources": []
+}
